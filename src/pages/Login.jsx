@@ -23,7 +23,7 @@ export default function Login() {
 
   return (
     <div className="login">
-      <div className="logo-big" aria-hidden="true">D</div>
+      <img className="logo-big" src={`${import.meta.env.BASE_URL}dara-logo.svg`} alt="DARA" />
       {error && (
         <div className="notice notice-error" style={{ width: 320 }} role="alert">
           <p><strong>Error:</strong> {error}</p>

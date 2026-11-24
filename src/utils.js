@@ -41,4 +41,7 @@ export const slugify = (s) =>
 
 export const fileSize = (b) => (b > 1048576 ? `${(b / 1048576).toFixed(1)} MB` : `${Math.round((b || 0) / 1024)} KB`);
 
-export const ROLE_LABEL = { administrator: "Administrator", editor: "Editor", author: "Author", contributor: "Contributor", subscriber: "Subscriber" };
+export const SUBSCRIBER_STATUS_LABEL = { active: "Active", unsubscribed: "Unsubscribed" };
+export const UNSUBSCRIBE_REASON_LABEL = { link: "via email link", one_click: "via email client", admin: "removed by admin", bounce: "email bounced" };
+export const CAMPAIGN_STATUS_LABEL = { pending: "Queued", fanning_out: "Preparing", sending: "Sending", completed: "Completed" };
+export const ROLE_LABEL ={ administrator: "Administrator", editor: "Editor", author: "Author", contributor: "Contributor", subscriber: "Subscriber" };

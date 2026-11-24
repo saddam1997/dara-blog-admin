@@ -16,6 +16,8 @@ const UserEdit = lazy(() => import("./pages/UserEdit.jsx"));
 const Settings = lazy(() => import("./pages/Settings.jsx"));
 const Activity = lazy(() => import("./pages/Activity.jsx"));
 const Tools = lazy(() => import("./pages/Tools.jsx"));
+const NewsletterSubscribers = lazy(() => import("./pages/NewsletterSubscribers.jsx"));
+const NewsletterCampaigns = lazy(() => import("./pages/NewsletterCampaigns.jsx"));
 
 function Gate({ cap, children }) {
   const { can } = useAuth();
@@ -49,6 +51,8 @@ export default function App() {
           <Route path="media" element={<Gate cap="upload_files"><Media /></Gate>} />
           <Route path="media/new" element={<Gate cap="upload_files"><Media uploadOnly /></Gate>} />
           <Route path="comments" element={<Gate cap="edit_posts"><Comments /></Gate>} />
+          <Route path="newsletter" element={<Gate cap="manage_newsletter"><NewsletterSubscribers /></Gate>} />
+          <Route path="newsletter/campaigns" element={<Gate cap="manage_newsletter"><NewsletterCampaigns /></Gate>} />
           <Route path="users" element={<Gate cap="list_users"><Users /></Gate>} />
           <Route path="users/new" element={<Gate cap="create_users"><UserEdit key="new" isNew /></Gate>} />
           <Route path="users/:id" element={<Gate cap="edit_users"><UserEdit /></Gate>} />

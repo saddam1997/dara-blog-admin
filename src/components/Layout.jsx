@@ -21,6 +21,16 @@ const MENU = [
   },
   { label: "Media", icon: "▣", to: "/media", cap: "upload_files", sub: [{ label: "Library", to: "/media" }, { label: "Add New Media File", to: "/media/new" }] },
   { label: "Comments", icon: "✉", to: "/comments", cap: "edit_posts", badge: "pendingComments" },
+  {
+    label: "Newsletter",
+    icon: "✦",
+    to: "/newsletter",
+    cap: "manage_newsletter",
+    sub: [
+      { label: "Subscribers", to: "/newsletter" },
+      { label: "Notifications", to: "/newsletter/campaigns" },
+    ],
+  },
   { sep: true },
   {
     label: "Users",
@@ -71,7 +81,7 @@ export default function Layout() {
       <div className="adminbar">
         <div className="flex" style={{ gap: 0 }}>
           <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label="Menu">☰</button>
-          <Link to="/" title="Dashboard"><span className="logo">D</span></Link>
+          <Link to="/" title="Dashboard" className="logo-link"><span className="logo"><img src={`${import.meta.env.BASE_URL}dara-logo.svg`} alt="DARA" /></span></Link>
           <a href={`${SITE_URL}/blog`} target="_blank" rel="noreferrer">🏠 DARA Blog</a>
           {badges.pendingComments > 0 && <Link to="/comments?status=pending">💬 {badges.pendingComments}</Link>}
           {can("edit_posts") && <Link to="/posts/new">＋ New</Link>}

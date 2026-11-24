@@ -71,7 +71,9 @@ label { cursor: pointer; }
 }
 .adminbar a, .adminbar button { color: var(--side-text); background: none; border: 0; cursor: pointer; padding: 0 8px; height: 32px; display: inline-flex; align-items: center; gap: 6px; }
 .adminbar a:hover, .adminbar button:hover { color: #72aee6; background: var(--side-hover); }
-.adminbar .logo { display: inline-flex; width: 20px; height: 20px; border-radius: 4px; background: var(--brand); color: #fff; font-weight: 700; align-items: center; justify-content: center; font-size: 12px; }
+.adminbar .logo { display: inline-flex; align-items: center; height: 24px; padding: 2px 8px; border-radius: 6px; background: #fff; }
+.adminbar .logo img { height: 20px; width: auto; display: block; }
+.adminbar a.logo-link:hover { background: none; }
 .adminbar .menu-toggle { display: none; }
 .adminbar .avatar { width: 18px; height: 18px; border-radius: 50%; background: #50575e; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; }
 
@@ -290,7 +292,7 @@ tr:hover .row-actions, tr:focus-within .row-actions { visibility: visible; }
 
 /* ---------- Login ---------- */
 .login { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding-top: 8vh; }
-.login .logo-big { width: 84px; height: 84px; border-radius: 16px; background: var(--brand); color: #fff; font-size: 40px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
+.login .logo-big { width: 220px; max-width: 80vw; height: auto; display: block; margin: 0 auto 24px; }
 .login form { width: 320px; background: #fff; border: 1px solid var(--border-light); box-shadow: 0 1px 3px rgba(0,0,0,.04); padding: 26px 24px 34px; }
 .login label { display: block; font-size: 14px; margin-bottom: 3px; }
 .login input[type="text"], .login input[type="password"] { width: 100%; font-size: 24px; min-height: 40px; margin-bottom: 16px; }
